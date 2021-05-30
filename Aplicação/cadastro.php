@@ -1,18 +1,17 @@
 <!DOCTYPE HTML>
 <html lang="pt-BR">
 <head>
-	
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" type="text/javascript"></script>
 	 <script type='text/javascript' src='//igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js'></script>
-	<script src="js/script.js" type="text/javascript"></script>
+	<script src="../js/script.js" type="text/javascript"></script>
 	<link rel="sortcut icon" href="icon.png" type="image/x-icon">
 
-	<title>Cadastro</title>
+	<title>Configurações</title>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 </head>
 <body>
 	<header>

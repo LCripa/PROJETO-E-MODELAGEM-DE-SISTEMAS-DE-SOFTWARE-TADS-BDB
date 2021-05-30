@@ -1,5 +1,4 @@
 <?php
-
 date_default_timezone_set('UTC');
 
 require('vendor/autoload.php');
@@ -178,7 +177,9 @@ if(isset($_POST['q'])){
 
 elseif(isset($_POST['tela'])){
     session_start();
+
     $tela=$_POST['tela'];
+
     switch ($tela) {
         case 'avaria':
             $placa=str_replace("-","", $_POST["placa"]);
@@ -333,7 +334,7 @@ elseif(isset($_POST['tela'])){
                        "EXPEDIÇÃO"=>3,
                        "RECOLHA"=>4
                ];
-                $consulta= $pdo->query("SELECT sku.N_processo,sku.nome_process,sku.data_processo,cadastro_do_usuario.login FROM sku  INNER JOIN cadastro_do_usuario ON sku.id_user=cadastro_do_usuario.id_user ORDER BY sku.data_processo");
+                $consulta= $pdo->query("SELECT sku.N_processo,sku.nome_process,sku.data_processo,cadastro_do_usuario.login FROM sku  INNER JOIN cadastro_do_usuario ON sku.id_user=cadastro_do_usuario.id_user ORDER BY sku.data_processo DESC");
                 foreach($consulta as $row) {
                     $data=implode("/",array_reverse(explode("-",$row["data_processo"])));
                     print_r("
@@ -392,6 +393,20 @@ elseif(isset($_POST['tela'])){
                 exit();
             }
             $pdo = null;        
+        break;
+
+        case 'configuracao':
+
+            $consulta = $pdo->prepare("SELECT nome_u, login, email, setor, cargo FROM cadastro_do_usuario WHERE id_user:id");
+
+            $consulta->execute(array('id' => $_SESSION['id_user']));
+            foreach($consulta as $row) {
+                echo $row[0]."¨";
+                echo $row[1]."¨";
+                echo $row[2]."¨";
+                echo $row[3]."¨";
+                echo $row[4]; 
+            }
         break;
 
         default:

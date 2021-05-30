@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 	$("#cnpj").mask("00.000.000/0000-00");
 	$("#empresa").mask("00.000.000/0000-00");
 	$("#tel").mask("(00)0000-00000");
@@ -6,11 +7,13 @@ $(document).ready(function() {
 	$("#carga_avaria").mask("0000000000");
 	$("#carga_cce").mask("0000000000");
 	$("#carga_ccr").mask("0000000000");
-	$("#num_rec").mask('000000');
+	$("#num_rec").mask('0000000000');
 	$("#placa_avaria").mask('SSS-0A00');
 	$("#placa_ccr").mask('SSS-0A00');
 	$("#placa_cce").mask('SSS-0A00');
 	$("#placa_rec").mask('SSS-0A00');
+	$("#placa_rac").mask('SSS-0A00');
+	
 });
 
 function loadFile(event,ident,id) {
@@ -44,6 +47,7 @@ function loadFile(event,ident,id) {
 function fechar() {
 	document.querySelector(".wrap").style.display = "none";
 }
+
 function erro(argument) {
 	document.getElementById("txt").innerHTML=argument;
 	document.querySelector(".wrap").style.display = "block";
@@ -577,6 +581,52 @@ function addTela(variaveis,telas) {
  		break;
  	}
  	
+}
+
+function config() {
+	var teste="mais";
+	var dados= {'tela':'configuracao','mais':teste};
+
+	$.ajax({	
+        url: "../backend.php",
+        method: "POST",                    
+        data: dados,
+        success: function(ressult) {
+        	var variaveis=ressult.split("¨");
+        	console.log(variaveis);
+       		addConfig(variaveis);
+        },
+	    error: function(XMLHttpRequest, textStatus, errorThrown) { 
+	        erro("Status: " + textStatus+"Error: " + errorThrown); 
+	    }  
+    });
+}
+
+function addConfig(argument) {
+	 document.getElementById("nome-conf").value=argument[0];
+	 document.getElementById("login-conf").value=argument[1];
+	 document.getElementById("email").value=argument[2];
+	 document.getElementById("setor").value=argument[3];
+	 document.getElementById("cargo").value=argument[4];
+}
+
+function loginConfig() {
+	document.getElementById("login-conf").disabled=false;
+	document.getElementByid("btnlogin").value="Salvar Alteração";
+}
+function senhaConfig() {
+	document.getElementById("new-password").disabled=false;
+	document.getElementById("con-password").disabled=false;
+	document.getElementByid("btnsenha").value="Salvar Alteração";
+}
+function mailConfig() {
+	document.getElementById("email").disabled=false;
+	document.getElementByid("btnmail").value="Salvar Alteração";
+}
+function ambosConfig() {
+	document.getElementById("setor").disabled=false;
+	document.getElementById("cargo").disabled=false;
+	document.getElementByid("btncargo").value="Salvar Alteração";
 }
 
 

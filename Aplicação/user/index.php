@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 <head>
 	<meta charset="utf-8">
@@ -20,7 +19,7 @@
 
 		<nav class="menu-user menu-cabecalho">
 			<ul>
-				<li>&#9881;</li>
+				<a href="config.php"><li>&#9881;</li></a>
 				<a href="#"><li onclick="sair()">Sair</li></a>
 			</ul>
 		</nav>
@@ -38,6 +37,7 @@
 				<a href="#"><li onclick="tela('form-cce')">CCE</li></a><br><br>
 				<a href="#"><li onclick="tela('form-recolha')">RECOLHA</li></a>
 				<a href="#"><li onclick="sku(); tela('sku-consulta');">SKU</li></a>
+				<a href="config.php"><li>&#9881;</li></a>
 				<a href="#"><li onclick="sair()">Sair</li></a>
 			</ul>
 		</nav>
@@ -235,17 +235,25 @@
 			<fieldset class="sku">
 				
 				<div class="row">
-					<table>
-						<tr>
-							<th>Carga</th>
-							<th>Processo</th>
-							<th>Login</th>
-							<th>Data</th>
-							<th>&#x1f441;</th>
-						</tr>
-					</table>
 					<div class="consulta form-group">
+						<table>
+							<tr>
+								<th>Carga</th>
+								<th>Processo</th>
+								<th>Login</th>
+								<th>Data</th>
+								<th>&#x1f441;</th>
+							</tr>
+
+						</table>
 						<table id="tabela_sku">
+							<tr>
+								<th>Carga</th>
+								<th>Processo</th>
+								<th>Login</th>
+								<th>Data</th>
+								<th>&#x1f441;</th>
+							</tr>
 
 						</table>
 					</div>

@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
-
 *{
 	box-sizing: border-box;
 	margin:0%;
@@ -27,7 +26,7 @@
   display: none;
 }
 
-.wrap .box{
+.wrap{
   text-align-last: center;
   width:20%;
   position: relative;
@@ -38,8 +37,14 @@
   border-radius: 5px;
   border: 1px solid#000;
 }
+.box{
+	width: 20%;
+}
+
 #txt{
+	padding-top:2%;
 	margin-top: 5%;
+	text-align-last: center;
 }
 .wrap .box span {
   float: right;
@@ -68,6 +73,10 @@ header input{
 	font-size: calc(1em + 1vw);
 }
 
+input:disabled{
+	cursor: not-allowed;
+	background-color: silver;
+}
 
 .erro{
 	color: red;
