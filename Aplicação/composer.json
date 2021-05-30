@@ -1,0 +1,26 @@
+{
+    "name": "controledequalidade/controledequalidade-php",
+    "type": "library",
+    "description": "Projeto Uninove",
+    "keywords": ["code coverage", "codecov", "coverage reports"],
+    "authors": [
+        {
+            "name": "controledequalidade.herokuapp.com/",
+            "email": "elberjsn@uni9.edu.br"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "silex/silex": "~1.1",
+    	"monolog/monolog": "1.0.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~8.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Example": "src/"
+        }
+    }
+
+}

@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+
+*{
+	box-sizing: border-box;
+	margin:0%;
+	background-color: #cef0ee;
+	font-family: 'Ubuntu', sans-serif;
+}
+#form-avaria,
+#sku-consulta,
+#form-cce,
+#form-ccr,
+#form-recolha{
+	display: none;
+}
+.form-avaria,.sku-consulta,.form-cce,.form-ccr,.form-recolha{
+	display: none;
+
+}
+
+.wrap{
+  width:100%;
+  height: 100%;
+  position:fixed;
+  background: rgba(0,0,0,0.2);
+  display: none;
+}
+
+.wrap .box{
+  text-align-last: center;
+  width:20%;
+  position: relative;
+  left:calc(50% - 200px);
+  top: calc(50% - 200px);
+  padding-left:1%;
+  padding-right:1%;
+  border-radius: 5px;
+  border: 1px solid#000;
+}
+#txt{
+	margin-top: 5%;
+}
+.wrap .box span {
+  float: right;
+  background:#cef0ee;	
+  cursor:pointer;
+}
+
+
+a,li,nav,h1,h2 {
+	list-style-type: none;
+	text-decoration: none;
+	color: black;
+	display: inline;
+	background-color: transparent;	
+}
+label{
+	max-width: 2rem;
+}
+header,.desktop,.mobile{
+	padding: 2%;
+	background: #5eb3af;
+	display: inline-block;
+	width: 100%;
+}
+header input{
+	font-size: calc(1em + 1vw);
+}
+
+
+.erro{
+	color: red;
+	display: none;
+	text-align: center;
+}
+
+.menu-cabecalho{
+  	width: 100%;
+  	background: #5eb3af;
+	word-spacing:2rem;
+	text-align: center;
+}
+
+.menu-cabecalho ul{
+	margin-left: 40%;
+	display: inline;
+  	background: #5eb3af;
+	padding: 2%;
+	word-spacing: 1%;
+}
+.menu-cabecalho li{
+	padding: 1%;
+	margin: 1%;
+	border:1px solid #000;
+	border-radius: 10px;
+	text-align-last: center;
+	background: rgb(94, 179, 175);
+}
+.menu-cabecalho li:hover{
+	border-radius: 2px solid #000;
+	background: rgba(255, 255, 255,0.4);
+}
+.menu-mobile {
+	margin: 1rem;
+}
+.menu-mobile ul{
+	padding: 0%;
+	margin: 1rem;
+}
+.menu-mobile ul li{
+	padding: 0.1rem;
+	font-size: small;
+	display: inline;
+	background: #cef0ee;
+	border-radius: 5px;
+}
+
+.mobile{
+	display: none;
+}
+
+#menu, .menu {
+	margin-left: 10%;
+	display: none;
+}
+
+
+
+input,button{
+	border:1px solid;
+	border-radius: 5px;
+	margin: 2%;
+}
+
+.form{
+	background-color: #cef0ee;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.row{
+	background: transparent;
+	margin: 0 auto;
+	width: 85%;
+}
+
+.row input, .row label{
+	background: transparent;
+	display: block;
+	text-align-last: left;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+.login{
+	width: 85%;
+}
+
+
+label,.row,.form-group{
+	border-radius: 15px;
+	border: 0px solid;
+	margin: 0 auto;
+}
+
+.inicio{
+	margin-top: 2%;
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 2%;
+}
+.empresa input,.inicio input,.cadastro input,.telas input{
+	padding: 2%;
+}
+.cadastro,.empresa{
+	margin-top: 2%;
+	width: 98%;
+	margin: 0 auto;
+	margin-top: 2%;
+}
+
+.inicio fieldset,.empresa fieldset,.cadastro fieldset,.telas fieldset{
+	text-align-last: center;
+	border-radius: 10px;
+	border:0px solid;
+	background-color: #fff;
+
+}
+.inicio label, .inicio input,.telas label{
+	margin: 2rem;
+	text-align: left;
+
+}
+.telas{
+	text-align-last: justify;
+	margin-left: 25%;
+	width: 65%;
+
+}
+
+.btn_add{
+	cursor: cell;
+}
+.btn{
+	padding: 1%;
+	cursor: pointer;
+}
+.menu-lateral{
+	width: 20%;
+	position: absolute;
+	margin-left: 0.5%;
+	margin-top: 1rem;
+}
+.menu-lateral ul{
+	text-align-last: justify;
+	background-color: #5eb3af;
+	width: 90%;
+	border-radius: 1rem;
+}
+.menu-lateral li{
+	display: inline-block;
+	padding: 1rem;
+	margin-top: 0.5rem;
+	margin-left: -10%;
+	border-radius: 10px;
+	width: 100%;
+}
+.line{
+	font-size: 12px;
+}
+
+.menu-lateral li:hover{
+	background:rgba(66, 125, 121,0.8);
+	cursor: progress;
+}
+input,button{
+	background-color: white;
+	border-radius: 10px;
+	border: 2px solid #000;
+}
+
+.form-control-complete{
+	width: 80%;
+}
+
+.form-control{
+	width: 30%;
+}
+.form-control-one{
+	width: 20%;
+}
+
+.form-group{
+	background-color: #fff;
+	width: 90%;
+	text-align-last: center;
+}
+.form-group label,.form-group input{
+	font-weight:bolder;
+	display: inline-block;
+}
+
+
+.menu-cabecalho{
+	margin-right: 0px;
+}
+.form-group-one{
+	background-color: #fff;
+	text-align-last: center;
+	width: 100%;
+	
+}
+.line label{
+	display: inline !important;
+}
+.output{
+	width: 20%;
+	height: 80px;
+}
+.consulta table{
+	width: 90%;
+	text-align-last: center;
+}
+
+.consulta table,.consulta td, .consulta tr{
+	background: #fff;
+	border-top: 1px double #000;
+}
+
+.sku{
+	max-height: 500px;
+     overflow:auto; 
+}
+
+@media screen and (max-width: 850px) {
+	.form-group{
+		display: inline;
+	}
+	.form-control{
+		width: 100%;
+	}
+	.form-control-complete{
+		width: 100%;
+	}
+	.line{
+		font-size: 15px;
+	}
+	.row input, .row label{
+		display: block;
+		margin-left: 0%;
+		margin-right: 0%;
+	}
+
+	nav {
+		display: none;
+	}
+
+	/**input[type="checkbox"]*/
+
+	[type="checkbox"]:checked ~ nav {
+		display: block;
+	}
+	h2{
+		font-size:small;
+	}
+	.menu { 
+		display: block; 
+		padding: 10px;
+		float: right;
+		text-align-last: left;
+		
+	}
+	nav ul {
+		margin: 0;
+		padding: 0;
+	}
+	nav ul li {
+		display: block;
+		padding: 10px 0px;
+	}
+	nav ul li a {
+		width: 100%;
+		float: left;
+		text-align: center;
+	}
+
+	.menu-lateral,.desktop{
+		display: none;
+	}
+	.mobile{
+		display: inline-block;
+	}
+	.telas{
+		margin:0 auto;
+		width: 100%;
+	}
+	.empresa, .inicio,.cadastro{
+		width: 100%;
+	}
+
+}
